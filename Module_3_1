@@ -1,0 +1,34 @@
+calls = 0
+
+def count_calls():
+    global calls
+    calls += 1
+
+def string_info(string):
+    a = len(string)
+    b = string.upper()
+    c = string.lower()
+    count_calls()
+    return a, b, c
+
+def is_contains(string, list_to_search):
+    a = string.lower()
+    b = ','.join(list_to_search)
+    b = b.lower()
+
+    c = is_contains
+    if a in b:
+        c = True
+    else:
+        c = False
+    count_calls()
+    return c
+
+print(string_info('Week'))
+print(string_info('hello'))
+print(string_info('Orange'))
+print(is_contains('Urban', ['ban', 'BaNaN', 'urBAN']))
+print(is_contains('cycle', ['recycling', 'cyclic']))
+print(is_contains('red', ['read', 'Bread', 'fRed']))
+print(is_contains('DIve',['drIve','Dave','rive']))
+print(calls)
