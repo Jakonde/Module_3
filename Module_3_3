@@ -1,0 +1,17 @@
+def print_params(a = 1, b = 'строка', c = True):
+    print(a,b,c)
+
+print_params(2,3,5)
+print_params(1,'d')
+print_params('a',2,'new')
+print_params()
+print_params(b=25)
+print_params(c=[1,2,3])
+
+values_list=['b', False, 32]
+values_dict={'a': 'Hello', 'b': 555.65, 'c': True}
+print_params(*values_list)
+print_params(**values_dict)
+
+values_list_2=[123,'world']
+print_params(*values_list_2, 42)
